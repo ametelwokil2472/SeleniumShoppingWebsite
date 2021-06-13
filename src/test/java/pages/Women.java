@@ -5,23 +5,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Dresses {
+public class Women {
 	
-
 	private final static String URL = "http://automationpractice.com/index.php?id_category=5&controller=category";
 
 	private WebDriver driver;
 
-	public Dresses(WebDriver driver) {
+	public Women (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[3]/a")
-	private WebElement dresses;
+	@FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[1]/a")
+	private WebElement women;
 
-	public void dresses() {
-		dresses.click();
+	public void women() {
+		women.click();
 	}
 
 	public static String getUrl() {
@@ -47,5 +46,4 @@ public class Dresses {
 	public WebElement searchAssert(String item) {
 			return resfound;
 }
-
 }
